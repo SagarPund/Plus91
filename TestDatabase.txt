@@ -1,0 +1,97 @@
+CREATE DATABASE plus91;
+
+USE plus91;
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+--
+-- Database: `plus91`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `employee`
+--
+
+CREATE TABLE `employee` (
+  `ID` int(11) NOT NULL,
+  `Empid` varchar(50) DEFAULT NULL,
+  `FName` varchar(50) DEFAULT NULL,
+  `MName` varchar(50) DEFAULT NULL,
+  `LName` varchar(50) DEFAULT NULL,
+  `Sex` varchar(10) DEFAULT NULL,
+  `Birthdate` date DEFAULT NULL,
+  `Joiningdate` date DEFAULT NULL,
+  `Email` varchar(50) DEFAULT NULL,
+  `Contact` varchar(50) DEFAULT NULL,
+  `Location` varchar(50) DEFAULT NULL,
+  `Dept` varchar(50) DEFAULT NULL,
+  `Salary` decimal(9,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `employee`
+--
+ALTER TABLE `employee`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `employee`
+--
+ALTER TABLE `employee`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+--
+-- Table structure for table `failed_employee`
+--
+
+CREATE TABLE `failed_employee` (
+  `ID` int(11) NOT NULL,
+  `Empid` varchar(50) DEFAULT NULL,
+  `FName` varchar(50) DEFAULT NULL,
+  `MName` varchar(50) DEFAULT NULL,
+  `LName` varchar(50) DEFAULT NULL,
+  `Sex` varchar(10) DEFAULT NULL,
+  `Birthdate` date DEFAULT NULL,
+  `Joiningdate` date DEFAULT NULL,
+  `Email` varchar(50) DEFAULT NULL,
+  `Contact` varchar(50) DEFAULT NULL,
+  `Location` varchar(50) DEFAULT NULL,
+  `Dept` varchar(50) DEFAULT NULL,
+  `Salary` decimal(9,2) DEFAULT NULL,
+  `reason` TEXT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `failed_employee`
+--
+ALTER TABLE `failed_employee`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `failed_employee`
+--
+ALTER TABLE `failed_employee`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
